@@ -59,15 +59,6 @@ export default {
     const message = ref('');
     const messageFindUsers = 'Выберите сотрудника, что бы посмотреть его профиль';
     const messageUser = ref(messageFindUsers);
-    function errorCatch() {
-      // setTimeout - эмуляция ожидания обработки
-      // для проверки корректной работы прелоадера
-      setTimeout(() => {
-        message.value = 'Ошибка запроса!';
-        preload.value = false;
-        preloadUser.value = false;
-      }, 1000);
-    }
 
     // выбор пользователя и запрос по ID
     // по факту в ответе от api по конкретному ID может
@@ -115,7 +106,15 @@ export default {
             message.value = 'ничего не найдено';
           }
         }, 1000);
-      }).catch(errorCatch);
+      }).catch(() => {
+      // setTimeout - эмуляция ожидания обработки
+      // для проверки корректной работы прелоадера
+        setTimeout(() => {
+          message.value = 'Ошибка соединения с сервером!';
+          preload.value = false;
+          preloadUser.value = false;
+        }, 1000);
+      });
     }
     return {
       selectCardUser,

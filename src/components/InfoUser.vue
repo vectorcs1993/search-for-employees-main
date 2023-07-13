@@ -7,12 +7,12 @@
         {{ user.name }}
     </div>
     <div>
-      email:  <span class="text-grey">
+      Почта:  <span class="text-grey">
         {{ user.email }}
       </span>
     </div>
     <div>
-      phone:  <span class="text-grey">
+      Номер телефона:  <span class="text-grey">
         {{ user.phone }}
       </span>
     </div>
