@@ -51,7 +51,7 @@ export default {
     width: 22px;
     border-radius: 12px;
     animation-name: f_fadeG;
-    animation-duration: 1.2s;
+    animation-duration: 0.7s;
     animation-iteration-count: infinite;
     animation-direction: normal;
   }

@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 import axiosInstance from '../api/index';
-import { USERS } from '../api/routes';
+import { USERS, USER_BU_ID } from '../api/routes';
 
 const store = createStore({
   state: {
@@ -17,6 +17,11 @@ const store = createStore({
     fetchAllUsers: () => new Promise((resolve, reject) => {
       axiosInstance.get(USERS()).then(({ data }) => {
         store.commit('setUsers', data);
+        resolve(data);
+      }).catch((e) => reject(e));
+    }),
+    fetchUserId: (state, id) => new Promise((resolve, reject) => {
+      axiosInstance.get(USER_BU_ID(id)).then(({ data }) => {
         resolve(data);
       }).catch((e) => reject(e));
     }),

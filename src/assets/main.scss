@@ -32,64 +32,25 @@ $margin: 10px;
 .text-grey {
     color:#76787D;
 }
-.sidebar {
-    // border: 1px solid black;
-    border-radius: 10px 0px 0px 10px;
-    width: 35%;
-    color: rgb(0, 0, 0);
-    background-color: #FDFDFD;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
-}
-.userlist {
-    height: 67vh;
-    overflow: hidden; 
-    overflow-y: auto;
-}
-.info-block {
-    width: 75%;
-    border-radius: 0px 10px 10px 0px;
-    color: rgb(0, 0, 0);
-    background-color: #FDFDFD;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
-    &-empty-label {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-.card {
-    display: grid;
-    grid-template-columns: 60px calc(100% - 60px);
-    cursor: pointer;
-    margin: 5px;
-    padding: 2px;
-    height: 60px;
-    color: rgb(0, 0, 0);
-    background: #FFF;
-    font-size: x-small;
-    
-    &-avatar {
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.30);
-        border-radius: 10px 0px 0px 10px;
-    }
-    &-block {
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
-        border-radius: 0px 10px 10px 0px;
-        &-label-top {
-            position: absolute;
-            top: 25%;
-            left: 28%;
-            transform: translateY(-25%);
-          }
-        &-label-bottom {
-            position: absolute;
-            top: 75%;
-            left: 28%;
-            transform: translateY(-75%);
-        }
-    }
-}
+ /* width */
+ ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
 
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #d8d9da;
+    border-radius: 5px;
+  }
 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #b4b3b3;
+    border-radius: 5px;
+  }
 
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8b8b8b;
+  }
