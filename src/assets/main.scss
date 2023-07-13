@@ -8,7 +8,11 @@ $margin: 10px;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: rgb(0, 0, 0);
-  margin-top: $margin;
+}
+.container {
+    width: -webkit-fill-available;
+    height: 90vh;
+    display: flex;
 }
 .full-width {
     width: -webkit-fill-available;
@@ -28,41 +32,64 @@ $margin: 10px;
 .text-grey {
     color:#76787D;
 }
-
 .sidebar {
     // border: 1px solid black;
     border-radius: 10px 0px 0px 10px;
-    width: 40%;
+    width: 35%;
     color: rgb(0, 0, 0);
     background-color: #FDFDFD;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
 }
 .userlist {
-    height: 200px;
-    overflow:hidden; 
-    overflow-y:scroll;
+    height: 67vh;
+    overflow: hidden; 
+    overflow-y: auto;
 }
 .info-block {
-    cursor: pointer;
-    // border: 1px solid black;
+    width: 75%;
     border-radius: 0px 10px 10px 0px;
     color: rgb(0, 0, 0);
     background-color: #FDFDFD;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
+    &-empty-label {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
-.card-block {
-    margin: 10px;
-    padding: 3px;
-    height: 45px;
+.card {
+    display: grid;
+    grid-template-columns: 60px calc(100% - 60px);
     cursor: pointer;
-    // border: 1px solid black;
-    border-radius: 0px 10px 10px 0px;
-    background: #FFF;
+    margin: 5px;
+    padding: 2px;
+    height: 60px;
     color: rgb(0, 0, 0);
+    background: #FFF;
     font-size: x-small;
-    // display: flex;
-    // justify-content: row;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
+    
+    &-avatar {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.30);
+        border-radius: 10px 0px 0px 10px;
+    }
+    &-block {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
+        border-radius: 0px 10px 10px 0px;
+        &-label-top {
+            position: absolute;
+            top: 25%;
+            left: 28%;
+            transform: translateY(-25%);
+          }
+        &-label-bottom {
+            position: absolute;
+            top: 75%;
+            left: 28%;
+            transform: translateY(-75%);
+        }
+    }
 }
+
 
 

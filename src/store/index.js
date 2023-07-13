@@ -14,10 +14,12 @@ const store = createStore({
     },
   },
   actions: {
-    fetchUsers: () => axiosInstance.get(USERS()).then(({ data }) => {
-      console.log(data);
-      store.commit('setUsers', data);
-    }).catch((e) => console.log(e)),
+    fetchAllUsers: () => new Promise((resolve, reject) => {
+      axiosInstance.get(USERS()).then(({ data }) => {
+        store.commit('setUsers', data);
+        resolve(data);
+      }).catch((e) => reject(e));
+    }),
   },
 });
 

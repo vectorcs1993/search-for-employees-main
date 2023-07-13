@@ -1,10 +1,15 @@
 <template>
-  <div class="card-block outer" v-on:click="clickCard">
-    <div class="text-black innerName">
-      {{ user.name }}
+  <div class="card outer"  v-on:click="clickCard">
+     <div class="card-avatar">
+      <img>
     </div>
-    <div class="text-grey innerEmail">
-      {{ user.email }}
+    <div class="card-block">
+      <div class="text-black card-block-label-top">
+        {{ user.name }}
+      </div>
+      <div class="text-grey card-block-label-bottom">
+        {{ user.email }}
+      </div>
     </div>
   </div>
 </template>
@@ -36,17 +41,6 @@ export default {
 </script>
 <style>
 .outer {
-    position: relative;
-}
-
-.innerName {
-    position: absolute;
-    top: 25%;
-    transform: translateY(-25%);
-}
-.innerEmail {
-    position: absolute;
-    top: 75%;
-    transform: translateY(-75%);
+  position: relative;
 }
 </style>
