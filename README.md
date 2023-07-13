@@ -1,3 +1,8 @@
+Внешний вид:
+![image](https://github.com/vectorcs1993/search-for-employees-main/assets/69964750/a718e1c3-6679-4e70-91b6-b32e922bbb21)
+
+
+
 # search-for-employees
 
 ## Project setup
